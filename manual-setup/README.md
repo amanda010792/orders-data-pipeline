@@ -200,7 +200,7 @@ confluent kafka topic consume <filtered_topic_name> --from-beginning
 
 The results returned do not come back in readable form. This is because our data is stored as AVRO data and our consumer has not connected to Schema Registry to recieve the schema associated with the topic. In order to fix this we first have to create a Schema Registry key.     
 Navigate to your environment in the Confluent Cloud Dashboard and you'll see a section on the right hand side for Stream Governance: 
-![Schema Registry UI](images/schema_registry_ui.png?raw=true)
+![Schema Registry UI](../images/schema_registry_ui.png?raw=true)
 
 Note the Stream Governance endpoint (you'll need this to consume using SR). Also, create a SR key by clicking "Add Key" under credentials. Download the key (you'll need this also to consume using SR).    
 
