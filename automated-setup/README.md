@@ -75,7 +75,7 @@ Once your resources are provisioned, it's time to create our streaming data pipe
 [Confluent Cloud Dashboard](https://confluent.cloud/) and log in. 
 
 So far we have set up the following pieces of our data flow:     
-![Current Data Flow](images/post_provisioning_setup.png?raw=true)
+![Current Data Flow](../images/post_provisioning_setup.png?raw=true)
 
 #### Manipulate Data using ksqlDB
 
