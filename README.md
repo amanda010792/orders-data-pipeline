@@ -25,7 +25,6 @@ confluent login --save
 
 ## Setting up the Workshop Resources 
 
-**blurb about being able to deploy in automated fashion or manual. 
+You can set up the workshop using the UI or using the terraform provider (this allows for automated setup and destruction). 
 
-
-You can set up the workshop using the UI or using the terraform provider (this allows for automated setup and destruction). Instructions for both methods can be found below:      
+For directions on setting up manually, navigate to the [https://github.com/amanda010792/orders-data-pipeline/tree/main/manual-setup](manual-setup directory) of this repo. For directions on setting up in an automated fashion, navigate to the [https://github.com/amanda010792/orders-data-pipeline/tree/main/automated-setup](automated-serup directory) of this repo. 
