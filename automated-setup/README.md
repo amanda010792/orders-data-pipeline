@@ -1,4 +1,4 @@
-# orders-data-pipeline
+# orders-data-pipeline Automated Setup
 Orders Data Pipeline Workshop Walkthrough w/ Automated Setup using Terraform
 
 ## Setting up the Workshop Resources using the Confluent Terraform Provider
