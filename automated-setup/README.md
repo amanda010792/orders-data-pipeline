@@ -71,7 +71,8 @@ terraform apply
 
 #### Run the Workshop
 
-Once your resources are provisioned, it's time to create our streaming data pipeline. Navigate to the [https://confluent.cloud/](Confluent Cloud Dashboard) and log in. 
+Once your resources are provisioned, it's time to create our streaming data pipeline. Navigate to the
+[Confluent Cloud Dashboard](https://confluent.cloud/) and log in. 
 
 So far we have set up the following pieces of our data flow:     
 ![Current Data Flow](images/post_provisioning_setup.png?raw=true)
@@ -128,8 +129,8 @@ EMIT CHANGES;
 
 The results of this query will show us zip codes that have more than one order. You can click on the blue arrow next to a record in your list and this will show you the zipcode and the current count of orders placed in that zip code: 
 
-![Zipcodes Image A](images/zipcodesa.png?raw=true)
-![Zipcodes Image B](images/zipcodesb.png?raw=true)
+![Zipcodes Image A](../images/zipcodea.png?raw=true)
+![Zipcodes Image B](../images/zipcodeb.png?raw=true)
 
 Choose the zip code in the record for the next query. Now that we have a feel for the type of data that is living in our topic, we can filter our records based on our chosen zip code. To do this, we will need to run the following query in our editor: 
 ```
@@ -222,7 +223,7 @@ confluent kafka topic consume <filtered_topic_name> --from-beginning
 
 The results returned do not come back in readable form. This is because our data is stored as AVRO data and our consumer has not connected to Schema Registry to recieve the schema associated with the topic. In order to fix this we first have to create a Schema Registry key.     
 Navigate to your environment in the Confluent Cloud Dashboard and you'll see a section on the right hand side for Stream Governance: 
-![Schema Registry UI](images/schema_registry_ui.png?raw=true)
+![Schema Registry UI](../images/schema_registry_ui.png?raw=true)
 
 Note the Stream Governance endpoint (you'll need this to consume using SR). Also, create a SR key by clicking "Add Key" under credentials. Download the key (you'll need this also to consume using SR).    
 
@@ -236,14 +237,14 @@ The CLI will continue to run this consumer until you terminate it.
 ##### Bonus: Consume using a client application or Kafka Connect
 
 Let's imagine we had an application interested in consuming from the same topic. The Kafka Producer and Consumer APIs can be used to publish to and read from our Kafka topics. These can be embedded in our client application code to integrate our application layer and Kafka. There are a number of clients compatible with Confluent Cloud. Some resources to help you get started: 
-- [https://docs.confluent.io/cloud/current/client-apps/config-client.html](Kafka Client Quickstart Documentation)
-- [https://developer.confluent.io/get-started/](Confluent Developer Site Tutorial)
-- [https://docs.confluent.io/cloud/current/cp-component/clients-cloud-config.html](Confluent Cloud Client Configuration Documentation)
+- [Kafka Client Quickstart Documentation](https://docs.confluent.io/cloud/current/client-apps/config-client.html)
+- [Confluent Developer Site Tutorial](https://developer.confluent.io/get-started/)
+- [Confluent Cloud Client Configuration Documentation](https://docs.confluent.io/cloud/current/cp-component/clients-cloud-config.html)
 
 What if you wanted to send data from either your raw orders topic or your filtered orders topic to a downstream system like a database, data warehouse or file system? We can use one of the prebuilt connectors for Confluent Cloud to send data in a no-code format. You can also choose to run Kafka Connect in a self-managed capacity. Some resources to help you get started: 
-- [https://docs.confluent.io/cloud/current/connectors/index.html](Connect External Systems to Confluent Cloud - Documentation)
-- [https://www.confluent.io/hub/](Confluent Hub of Connectors)
-- [https://developer.confluent.io/learn-kafka/kafka-connect/intro/](Confluent Developer Site Overview and Tutorial)
+- [Connect External Systems to Confluent Cloud - Documentation](https://docs.confluent.io/cloud/current/connectors/index.html)
+- [Confluent Hub of Connectors](https://www.confluent.io/hub/)
+- [Confluent Developer Site Overview and Tutorial](https://developer.confluent.io/learn-kafka/kafka-connect/intro/)
 
 
 #### Tear Down the Workshop
