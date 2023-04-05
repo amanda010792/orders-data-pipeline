@@ -27,4 +27,4 @@ confluent login --save
 
 You can set up the workshop using the UI or using the terraform provider (this allows for automated setup and destruction). 
 
-For directions on setting up manually, navigate to the [manual-setup directory](https://docs.confluent.io/confluent-cli/current/install.html) of this repo. For directions on setting up in an automated fashion, navigate to the [automated-setup directory](https://github.com/amanda010792/orders-data-pipeline/tree/main/automated-setup) of this repo. 
+For directions on setting up manually, navigate to the [manual-setup directory](https://github.com/amanda010792/orders-data-pipeline/tree/main/manual-setup) of this repo. For directions on setting up in an automated fashion, navigate to the [automated-setup directory](https://github.com/amanda010792/orders-data-pipeline/tree/main/automated-setup) of this repo. 
